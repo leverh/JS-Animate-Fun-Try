@@ -1,0 +1,229 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    /* Background gradient */
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+  }
+  
+  /* Animate gradient movement */
+  @keyframes gradientBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .logo {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  
+  .tagline {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  .cta-button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background: #00f7ff;
+    color: #111;
+    cursor: pointer;
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  .features {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 4rem;
+  }
+  
+  .feature {
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .feature img {
+    width: 60px;
+    transition: transform 0.3s ease;
+  }
+  
+  .feature:hover {
+    transform: scale(1.1);
+  }
+  
+  .about {
+    margin-top: 4rem;
+    text-align: center;
+  }
+  
+  #about-artwork {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1rem;
+  }
+  #animated-logo {
+    width: 300px;
+    max-width: 90%;
+    display: block;
+    margin: 2rem auto;
+  }
+
+  @keyframes blink {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: #00f7ff; }
+  }
+
+  .intro {
+    font-size: 1.2rem;
+    color: #00f7ff;
+    white-space: nowrap;       
+    overflow: hidden;          
+    border-right: 2px solid #00f7ff; 
+    width: fit-content;
+    cursor: default;
+    animation: blink 1s step-end infinite;
+  }
+  
+  .intro:hover {
+    text-shadow: 0 0 8px #00f7ff, 0 0 16px #00f7ff;
+    transition: text-shadow 0.3s ease;
+  }
+
+  .glow-pink-link {
+    color: #ff69b4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+  }
+  
+  .glow-pink-link:hover {
+    color: #fff;
+    text-shadow: 0 0 8px #ff69b4, 0 0 16px #ff69b4;
+  }
+  
+  /* Pulsing animation */
+  @keyframes pulse-glow {
+    0% { text-shadow: 0 0 5px #ff69b4; }
+    50% { text-shadow: 0 0 15px #ff69b4; }
+    100% { text-shadow: 0 0 5px #ff69b4; }
+  }
+  
+  .glow-pink-link {
+    animation: pulse-glow 2s infinite;
+  }
+  
+  .scroll-button {
+    margin-top: 1rem;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    background: transparent;
+    color: #00f7ff;
+    border: 2px solid #00f7ff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .scroll-button:hover {
+    background: #00f7ff;
+    color: #111;
+  }
+
+  #eye-pupil:hover {
+    filter: drop-shadow(0 0 5px #00f7ff);
+    transition: filter 0.3s ease;
+  }
+  
+  #animated-logo:hover path {
+    filter: drop-shadow(0 0 6px #00f7ff);
+  }
+
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    /* .logo {
+        font-size: 3rem;
+        margin-top: 1rem;
+        padding-top: 8rem;
+      } */
+
+    #animated-logo {
+      padding-top: 15rem;
+    }
+
+    .container {
+      padding: 1rem;
+    }
+  
+    .tagline {
+      font-size: 1.5rem;
+    }
+  
+    .cta-button,
+    .scroll-button {
+      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+      margin-bottom: 1rem;
+    }
+  
+    .features {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+  
+    .feature {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    .feature img {
+      width: 50px;
+    }
+  
+    .intro {
+      font-size: 1rem;
+      text-align: center;
+      max-width: 90vw;
+      margin: 1rem auto;
+      white-space: normal;
+      overflow: visible;
+      border-right: none;
+      animation: none;
+    }
+  
+    #about-artwork {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  
