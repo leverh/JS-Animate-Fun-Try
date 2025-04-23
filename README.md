@@ -4,7 +4,7 @@ Welcome! This is a playful and modern animated landing page built for fun and to
 
 ## ✨ Live Demo
 
-> [View it live](https:)  
+> [View it live](https://rad-hotteok-99231b.netlify.app/)  
 
 ## 🛠️ Built With
 
